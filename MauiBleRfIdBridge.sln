@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "MedicalRfIdSensor", "MedicalRfIdSensor\MedicalRfIdSensor.nfproj", "{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiBleRfIdBridgeExampleApp", "MauiBleRfIdBridgeExampleApp\MauiBleRfIdBridgeExampleApp.csproj", "{E9B33BDA-7CE4-4997-975C-854D5511AEDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67C174A5-4643-4044-B6D9-1A40A50733D7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF22DB0-6F1F-49EE-9D11-A1E63A51ED98}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E9B33BDA-7CE4-4997-975C-854D5511AEDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B33BDA-7CE4-4997-975C-854D5511AEDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B33BDA-7CE4-4997-975C-854D5511AEDC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E9B33BDA-7CE4-4997-975C-854D5511AEDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B33BDA-7CE4-4997-975C-854D5511AEDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B33BDA-7CE4-4997-975C-854D5511AEDC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {366BCC31-0E7A-416B-BF37-CB493A3BDAAB}
+	EndGlobalSection
+EndGlobal

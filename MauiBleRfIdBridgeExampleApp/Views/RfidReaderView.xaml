@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBleRfIdBridgeExampleApp.Views.RfidReaderView">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="5" Padding="0">
+            <Image Source="rfid.png" HeightRequest="25" WidthRequest="25"  HorizontalOptions="Start"/>
+            <Label Text="Rfid Reader" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label Text="Connect" Margin="5" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="Black">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DeviceSelectCommand}"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Background >
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="LightGray"
+                       Offset="0.1" />
+            <GradientStop Color="DarkGray"
+                       Offset="1.0" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+
+
+    <VerticalStackLayout Spacing="25" Margin="10">
+        <Frame>
+            <VerticalStackLayout Spacing="25">
+            <Label
+                Text="Device Name" FontAttributes="Bold"
+                />
+
+            <Label
+                Text="{Binding DeviceName}"/>
+
+    </VerticalStackLayout>
+        </Frame>
+
+        <Frame>
+            <VerticalStackLayout Spacing="25">
+
+                <Label
+                Text="Latest Rfid Value" FontAttributes="Bold"
+               />
+
+            <Label
+                Text="{Binding LatestRfIdReading}" 
+               />
+            </VerticalStackLayout>
+        </Frame>
+
+    <Frame>
+            <VerticalStackLayout Spacing="25">
+            <Label
+                Text="All Tags Read" FontAttributes="Bold"
+               />
+
+            <CollectionView ItemsSource="{Binding TagList}" ItemSizingStrategy="MeasureAllItems">
+            <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Tag}"  FontAttributes="Bold" />
+                        <Label Text="{Binding Count}" Grid.Column="1" HorizontalTextAlignment="Center" />
+                        </Grid>
+                </DataTemplate>
+                 </CollectionView.ItemTemplate>
+            </CollectionView>
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>

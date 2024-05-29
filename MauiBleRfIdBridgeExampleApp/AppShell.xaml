@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiBleRfIdBridgeExampleApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiBleRfIdBridgeExampleApp.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Maui Ble Rfid Bridge Example">
+
+    <ShellContent
+        Title="Rfid Reader"
+        ContentTemplate="{DataTemplate local:RfidReaderView}"
+        Route="MainPage" />
+
+</Shell>

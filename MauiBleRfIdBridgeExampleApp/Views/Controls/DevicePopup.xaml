@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBleRfIdBridgeExampleApp.Views.Controls.DevicePopup"
+               xmlns:controls="clr-namespace:MauiBleRfIdBridgeExampleApp.Views.Controls"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+              Color="Transparent" >
+
+    <VerticalStackLayout>
+        <Frame BackgroundColor="White" HeightRequest="200" WidthRequest="200" CornerRadius="20" BorderColor="DarkGray" HasShadow="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Finding Rfid Sensor ..." FontAttributes="Bold" IsVisible="{Binding IsScanning}"/>
+                    <ActivityIndicator Grid.Row="1" IsVisible="{Binding IsScanning}" HeightRequest="50" IsRunning="{Binding IsScanning}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Image Grid.Row="0" Grid.RowSpan="2" x:Name="DevicesFoundImage" Source="rfid.png" HeightRequest="50" WidthRequest="50">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeviceSelectCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Grid.Row="2" x:Name="DevicesFoundLabel" Text="{Binding FoundDevice.Name}" HorizontalTextAlignment="Center"/>
+                </Grid>
+        </Frame>
+</VerticalStackLayout>
+
+</toolkit:Popup>
